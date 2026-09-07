@@ -1,0 +1,37 @@
+{
+  "name": "dsh-rest-adapter",
+  "version": "0.2.0",
+  "description": "Local HTTP REST bridge plugin for DeepSeek Harness: OpenAI-compatible chat, agent prompts with SSE streaming, model/effort selection, permission presets, session management, abort, approvals, and plugin roster on the DSH web server",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "rest",
+    "api",
+    "openai-compatible",
+    "sse"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "src",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<owner>/dsh-rest-adapter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/<owner>/dsh-rest-adapter/issues"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "license": "MIT"
+}

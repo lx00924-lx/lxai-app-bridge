@@ -1,0 +1,13 @@
+# ============================================================================
+# dsh-rest-adapter — DSH bundle patch（挂载声明）
+# ============================================================================
+# DSH 启动时按 bundle 层叠加本 patch：把 REST 桥接插件插入 Web profile 的配置树。
+# 安装方式：
+#   dsh plugin --profile web add github:<owner>/dsh-rest-adapter
+# 或本地开发安装：
+#   dsh plugin --profile web add link:<本目录绝对路径>
+# ============================================================================
+
+- insert:
+    - id: rest-adapter
+      name: dsh-rest-adapter
