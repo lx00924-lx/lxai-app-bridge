@@ -1,8 +1,8 @@
-# dsh-rest-adapter
+﻿# dsh-rest-adapter
 
-English | [中文](README.zh.md)
+English | [涓枃](README.zh.md)
 
-Local HTTP REST bridge plugin for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (DSH): a control plane for external apps (phone apps, Python bridges, schedulers) to drive the local DSH agent over standard HTTP — **no public exposure**. Routes mount on the existing web server port (`127.0.0.1:3080` by default) and answer through the same API gateway the browser uses, so everything you do through the REST API is visible in the DSH Web UI and shares its sessions.
+Local HTTP REST bridge plugin for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (DSH): a control plane for external apps (phone apps, Python bridges, schedulers) to drive the local DSH agent over standard HTTP 鈥?**no public exposure**. Routes mount on the existing web server port (`127.0.0.1:3080` by default) and answer through the same API gateway the browser uses, so everything you do through the REST API is visible in the DSH Web UI and shares its sessions.
 
 ## Install
 
@@ -10,15 +10,15 @@ Requires DSH `0.1.x` with a `web` profile.
 
 ```powershell
 # from GitHub (recommended)
-dsh plugin --profile web add github:<owner>/dsh-rest-adapter
+dsh plugin --profile web add github:lx00924-lx/DeepSeekREST
 
 # or from a local clone
 dsh plugin --profile web add link:D:\path\to\dsh-rest-adapter
 ```
 
-Then restart `dsh web` and refresh the browser. The plugin appears in the plugin list (Settings → Plugins) and `GET /health` answers with the endpoint roster.
+Then restart `dsh web` and refresh the browser. The plugin appears in the plugin list (Settings 鈫?Plugins) and `GET /health` answers with the endpoint roster.
 
-> If this plugin is already built into your DSH bundle, do NOT install it again — duplicate route registration fails on boot.
+> If this plugin is already built into your DSH bundle, do NOT install it again 鈥?duplicate route registration fails on boot.
 
 ## Endpoints (`http://127.0.0.1:3080`)
 
@@ -44,7 +44,7 @@ All routes send `Access-Control-Allow-Origin: *` and answer `OPTIONS` with 204.
 
 ```json
 {
-  "sessionId": "optional — omitted creates a new session (returned in the response)",
+  "sessionId": "optional 鈥?omitted creates a new session (returned in the response)",
   "prompt": "what the agent should do",
   "model": "deepseek-v4-flash",
   "reasoningEffort": "high",
@@ -52,13 +52,13 @@ All routes send `Access-Control-Allow-Origin: *` and answer `OPTIONS` with 204.
 }
 ```
 
-- `model` / `reasoningEffort` — selected before the turn via the gateway's `session.selectModel`; snake_case `reasoning_effort` is also accepted.
-- `permission` — `read-only` | `workspace-write` | `danger-full-access` (the `/permission` preset; common aliases are normalized). Switching presets injects a policy-change notice the model may address first — set it on the first message of a new session.
+- `model` / `reasoningEffort` 鈥?selected before the turn via the gateway's `session.selectModel`; snake_case `reasoning_effort` is also accepted.
+- `permission` 鈥?`read-only` | `workspace-write` | `danger-full-access` (the `/permission` preset; common aliases are normalized). Switching presets injects a policy-change notice the model may address first 鈥?set it on the first message of a new session.
 - `sessionId` reuse continues the existing session (never re-created).
 
 ## SSE events
 
-`event: reasoning` → `{content}` (thinking delta) · `event: content` → `{content}` (answer delta) · `event: tool_start` → `{id, tool, input}` · `event: tool_end` → `{id, tool, output, status}` · `event: waiting_approval` → `{approvalId, tool}` · `event: approval_resolved` → `{approvalId, outcome}` · `event: done` → `{sessionId, status, title?}` · `event: error` → `{message}`. Idle keep-alive comments arrive every 5 s; disconnecting cancels held approvals for that session.
+`event: reasoning` 鈫?`{content}` (thinking delta) 路 `event: content` 鈫?`{content}` (answer delta) 路 `event: tool_start` 鈫?`{id, tool, input}` 路 `event: tool_end` 鈫?`{id, tool, output, status}` 路 `event: waiting_approval` 鈫?`{approvalId, tool}` 路 `event: approval_resolved` 鈫?`{approvalId, outcome}` 路 `event: done` 鈫?`{sessionId, status, title?}` 路 `event: error` 鈫?`{message}`. Idle keep-alive comments arrive every 5 s; disconnecting cancels held approvals for that session.
 
 ## Config
 
