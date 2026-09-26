@@ -1,25 +1,23 @@
-dsh-rest-adapter (DeepSeekREST)
+lxai-app-bridge
 Copyright (C) 2026 lx00924-lx
-https://github.com/lx00924-lx/DeepSeekREST
+https://github.com/lx00924-lx/lxai-app-bridge
 
 以 GNU Affero General Public License v3.0（AGPL-3.0-only）发布，全文见同目录 LICENSE。
 
 依据 AGPL-3.0 第 7(b) 条，任何分发或以网络服务方式对外提供本插件的衍生版本，
 均须在产品界面或随附文档的显著位置保留以下署名：
 
-    项目：dsh-rest-adapter (DeepSeekREST)
+    项目：lxai-app-bridge
     作者：lx00924-lx
-    源码：https://github.com/lx00924-lx/DeepSeekREST
+    源码：https://github.com/lx00924-lx/lxai-app-bridge
 
 ------------------------------------------------------------------------------
 第三方名称与商标
 
-* 本插件为**第三方独立开发**，与 DeepSeek（杭州深度求索人工智能基础技术研究
-  有限公司）及其关联方、以及 DeepSeek Harness 项目**无任何隶属、合作、赞助或
-  背书关系**。
-* “DeepSeek”“DeepSeek Harness”及相关名称与标识归其各自权利人所有。本插件仅在
-  **说明兼容性与互操作性**的范围内提及这些名称（指称性合理使用），不表示任何
+* 本插件为**独立第三方项目**，与任何宿主产品或服务提供方**无任何隶属、合作、
+  赞助或背书关系**。
+* 若在文档或兼容性说明中提及宿主或其它产品的名称与标识，仅用于**说明兼容性与
+  互操作性**（指称性合理使用），相关名称与标识归其各自权利人所有，不表示任何
   官方认证或授权。
-* 本插件**不包含**任何来自 DeepSeek Harness 的源码：它只在运行时调用宿主对外
-  提供的接口（`webServer` / `apiProxy` / `approval` 等服务）。宿主本身的版权与
-  许可（MIT）归其作者所有。
+* 本插件**不包含**任何宿主项目的源码：它只在运行时调用宿主对外暴露的服务
+  （`webServer`、会话、审批、提问、插件清单等）。宿主自身的版权与许可归其作者。

@@ -1,13 +1,18 @@
 # ============================================================================
-# dsh-rest-adapter — DSH bundle patch（挂载声明）
+# lxai-app-bridge — bundle patch（挂载声明）
 # ============================================================================
-# DSH 启动时按 bundle 层叠加本 patch：把 REST 桥接插件插入 Web profile 的配置树。
+# 宿主启动时按 bundle 层叠加本 patch：把本地 HTTP 接口插件插入 web profile 的配置树。
+#
 # 安装方式：
-#   dsh plugin --profile web add github:<owner>/dsh-rest-adapter
-# 或本地开发安装：
+#   dsh plugin --profile web add github:lx00924-lx/lxai-app-bridge
+#
+# 本地开发安装：
 #   dsh plugin --profile web add link:<本目录绝对路径>
+#
+# 也可以不装进 bundle，直接把 lib/index.js 复制到用户插件目录：
+#   ~/.dsh/user-plugins-group/plugins/lxai-app-bridge/lib/index.js
 # ============================================================================
 
 - insert:
-    - id: rest-adapter
-      name: dsh-rest-adapter
+    - id: lxai-app-bridge
+      name: lxai-app-bridge

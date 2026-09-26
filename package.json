@@ -1,21 +1,26 @@
 {
-  "name": "dsh-rest-adapter",
-  "version": "0.2.0",
-  "description": "Local HTTP REST bridge plugin for DeepSeek Harness: OpenAI-compatible chat, agent prompts with SSE streaming, model/effort selection, permission presets, session management, abort, approvals, and plugin roster on the DSH web server",
+  "name": "lxai-app-bridge",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local HTTP bridge plugin for a local agent host: model catalog, session list with real model/effort/permission state, SSE agent turns, choice-box (ask_user_question) relay, approval relay and abort — used by the LxAI App remote bridge.",
   "keywords": [
-    "dsh",
-    "dsh-plugin",
-    "deepseek-harness",
+    "agent",
+    "local-agent",
     "rest",
-    "api",
+    "sse",
     "openai-compatible",
-    "sse"
+    "plugin",
+    "bridge",
+    "remote-control"
   ],
   "type": "module",
   "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
   "files": [
     "lib",
-    "src",
     "cordis.patch.yml",
     "README.md",
     "README.zh.md",
@@ -24,17 +29,17 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lx00924-lx/DeepSeekREST.git"
+    "url": "git+https://github.com/lx00924-lx/lxai-app-bridge.git"
   },
   "bugs": {
-    "url": "https://github.com/lx00924-lx/DeepSeekREST/issues"
+    "url": "https://github.com/lx00924-lx/lxai-app-bridge/issues"
   },
   "author": "lx00924-lx",
+  "homepage": "https://github.com/lx00924-lx/flutter-app",
+  "license": "AGPL-3.0-only",
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
     }
-  },
-  "license": "AGPL-3.0-only"
+  }
 }
-
