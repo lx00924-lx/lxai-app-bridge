@@ -67,3 +67,22 @@ Optional plugin config (in a later patch layer): `turnTimeoutMs` (600000), `poll
 ## Build
 
 The shipped `lib/index.js` is a self-contained bundle; rebuild from the source checkout with the workspace host-face build. For a standalone rebuild, inline the external imports (`toFetchHandler` from `@deepseek-ai/dsh-host-apiproxy`, `z` from `@deepseek-ai/schemastery`) with your bundler of choice.
+
+## License
+
+GNU Affero General Public License v3.0 (`AGPL-3.0-only`) - see [LICENSE](LICENSE) and [NOTICE](NOTICE).
+
+You may use, modify and self-host this plugin freely, including commercially. Two obligations apply if you pass it on:
+
+- **Publish the source.** If you distribute a modified version - or expose it as a network service - you must make the complete corresponding source of your modified version available under the same license.
+- **Keep the attribution.** Under AGPL-3.0 section 7(b), every distributed or network-served derivative must keep the following notice in its about / legal-notices surface or accompanying documentation:
+  `dsh-rest-adapter (DeepSeekREST) - by lx00924-lx - https://github.com/lx00924-lx/DeepSeekREST`
+
+## Trademarks and disclaimer
+
+This is an **independent third-party plugin**. It is **not affiliated with, endorsed by, sponsored by, or connected to DeepSeek** (Hangzhou DeepSeek Artificial Intelligence Basic Technology Research Co., Ltd.) or the DeepSeek Harness project.
+
+"DeepSeek", "DeepSeek Harness" and related names and marks belong to their respective owners. They are used here only to **describe interoperability** (nominative use) - no official certification, partnership or endorsement is implied.
+
+This plugin contains **no code copied from DeepSeek Harness**; it calls the runtime services the host exposes (`webServer`, `apiProxy`, `approval`, ...). The host itself is MIT-licensed by its own authors.
+

@@ -1,4 +1,4 @@
-﻿{
+{
   "name": "dsh-rest-adapter",
   "version": "0.2.0",
   "description": "Local HTTP REST bridge plugin for DeepSeek Harness: OpenAI-compatible chat, agent prompts with SSE streaming, model/effort selection, permission presets, session management, abort, approvals, and plugin roster on the DSH web server",
@@ -19,7 +19,8 @@
     "cordis.patch.yml",
     "README.md",
     "README.zh.md",
-    "LICENSE"
+    "LICENSE",
+    "NOTICE"
   ],
   "repository": {
     "type": "git",
@@ -28,11 +29,12 @@
   "bugs": {
     "url": "https://github.com/lx00924-lx/DeepSeekREST/issues"
   },
+  "author": "lx00924-lx",
   "dsh": {
     "bundle": {
       "patch": "./cordis.patch.yml"
     }
   },
-  "license": "MIT"
+  "license": "AGPL-3.0-only"
 }
 

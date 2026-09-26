@@ -67,3 +67,20 @@ dsh plugin --profile web add link:D:\path\to\dsh-rest-adapter
 ## 构建
 
 随包发布的 `lib/index.js` 是自包含 bundle；源码来自 DSH 工作区（`packages/host/rest-adapter`）。独立重构建时，用你顺手的打包器把外部导入（`@deepseek-ai/dsh-host-apiproxy` 的 `toFetchHandler`、`@deepseek-ai/schemastery` 的 `z`）内联进产物即可。
+
+## 开源许可
+
+以 **GNU Affero General Public License v3.0（`AGPL-3.0-only`）** 发布，全文见 [LICENSE](LICENSE)，第三方名称说明见 [NOTICE](NOTICE)。
+
+你可以自由使用、修改、自建、自托管（含商业用途）。把修改版**分发出去**、或者**做成网络服务对外提供**时，有两条义务：
+
+- **公开源码**：必须以同一许可公开你修改后的完整对应源码。
+- **保留署名**：依据 AGPL-3.0 第 7(b) 条，任何分发或对外提供服务的衍生版本，都必须在「关于 / 法律声明」界面或随附文档的显著位置保留：
+  `dsh-rest-adapter (DeepSeekREST) - 作者 lx00924-lx - https://github.com/lx00924-lx/DeepSeekREST`
+
+## 第三方名称与商标声明
+
+- 本插件为**第三方独立开发**，与 DeepSeek（杭州深度求索人工智能基础技术研究有限公司）及其关联方、以及 DeepSeek Harness 项目**无任何隶属、合作、赞助或背书关系**。
+- “DeepSeek”“DeepSeek Harness”及相关名称与标识归其各自权利人所有；本插件仅在**说明兼容性与互操作性**的范围内提及（指称性合理使用），不表示任何官方认证或授权。
+- 本插件**不包含**任何来自 DeepSeek Harness 的源码：它只在运行时调用宿主对外提供的服务（`webServer` / `apiProxy` / `approval` 等）。宿主自身依 MIT 许可，版权归其作者。
+
