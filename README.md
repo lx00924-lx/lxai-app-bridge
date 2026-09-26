@@ -60,14 +60,13 @@ These routes sit behind the host's browser-trust fence (Host must be loopback) b
 
 ## License
 
-GNU Affero General Public License v3.0 (`AGPL-3.0-only`) — see [LICENSE](LICENSE) and [NOTICE](NOTICE).
+Apache License 2.0 - see [LICENSE](LICENSE) and [NOTICE](NOTICE).
 
-Use, modify and self-host it freely, including commercially. Two obligations apply when you pass it on:
+Use, modify and redistribute it freely, including in closed-source and commercial products. The only obligations are the usual Apache-2.0 ones: keep the copyright and license notices, and state significant changes. Section 6 of the license grants **no trademark rights**.
 
-- **Publish the source** — if you distribute a modified version, or expose it as a network service, you must make the complete corresponding source available under the same license.
-- **Keep the attribution** — under AGPL-3.0 section 7(b), every distributed or network-served derivative must keep the following notice in its about / legal-notices surface or accompanying documentation:
-  `lxai-app-bridge - by lx00924-lx - https://github.com/lx00924-lx/lxai-app-bridge`
+There is **no warranty**: the plugin is provided "as is", without any implied warranty, and the author is not liable for any damages. Use it only to control devices you own or are explicitly authorised to control, and never expose the host's local port to the public network.
 
 ## Third-party names
 
 This is an **independent third-party plugin**. It contains no code copied from any host project; it only calls the services a host exposes at runtime (`webServer`, sessions, approvals, user questions, plugins). Product names of any host it is used with belong to their respective owners and are used, if at all, only to describe interoperability.
+

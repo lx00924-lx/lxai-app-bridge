@@ -2,14 +2,26 @@ lxai-app-bridge
 Copyright (C) 2026 lx00924-lx
 https://github.com/lx00924-lx/lxai-app-bridge
 
-以 GNU Affero General Public License v3.0（AGPL-3.0-only）发布，全文见同目录 LICENSE。
+本项目以 Apache License 2.0 发布，完整条款见同目录 LICENSE。
 
-依据 AGPL-3.0 第 7(b) 条，任何分发或以网络服务方式对外提供本插件的衍生版本，
-均须在产品界面或随附文档的显著位置保留以下署名：
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
 
-    项目：lxai-app-bridge
-    作者：lx00924-lx
-    源码：https://github.com/lx00924-lx/lxai-app-bridge
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+------------------------------------------------------------------------------
+免责声明
+
+* 本插件按“现状”提供，不附带任何明示或默示的担保（含适销性、特定用途适用性、
+  不侵权）。作者不对任何直接、间接、附带或后果性损害承担责任。
+* 使用者须自行确认：**只对自己拥有所有权或已获得合法授权的设备**使用本插件
+  所提供的远程控制能力。未经授权控制他人设备的后果由使用者自行承担。
+* 本插件不承诺任何安全性或可用性；请勿把宿主的本地服务端口暴露到公网。
 
 ------------------------------------------------------------------------------
 第三方名称与商标
@@ -17,7 +29,7 @@ https://github.com/lx00924-lx/lxai-app-bridge
 * 本插件为**独立第三方项目**，与任何宿主产品或服务提供方**无任何隶属、合作、
   赞助或背书关系**。
 * 若在文档或兼容性说明中提及宿主或其它产品的名称与标识，仅用于**说明兼容性与
-  互操作性**（指称性合理使用），相关名称与标识归其各自权利人所有，不表示任何
-  官方认证或授权。
+  互操作性**（指称性合理使用）；相关名称与标识归其各自权利人所有，不表示任何
+  官方认证或授权。Apache License 2.0 第 6 条亦明确：本许可不授予任何商标权。
 * 本插件**不包含**任何宿主项目的源码：它只在运行时调用宿主对外暴露的服务
   （`webServer`、会话、审批、提问、插件清单等）。宿主自身的版权与许可归其作者。
