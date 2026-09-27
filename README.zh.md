@@ -50,6 +50,12 @@ dsh plugin --profile web add github:lx00924-lx/lxai-app-bridge
 
 选择框 / 审批的状态会依次上报为：`pending`（刚提出）→ `waiting`（等久了但**仍在等**，这一轮不会交给模型）→ `orphaned`（等太久已中止本轮，此时补答会以「续跑」方式重新起一轮）。
 
+### 关于 `/v1/models` 的 `name` 字段
+
+- `id`（如 `deepseek-v4-flash`）是**接口真值**，调用方切换模型时必须原样回传，插件不做任何加工；
+- `name` 是给人看的展示名。插件会去掉开头的厂商前缀（`DeepSeek-V4-Flash` → `V4-Flash`），
+  只影响展示，不影响任何调用；`name` 缺失时回退为 `id`。
+
 ## SSE 事件
 
 `reasoning{content}` · `content{content}` · `tool_start{id,tool,input}` · `tool_end{id,tool,output,status}` · `waiting_approval{approvalId,tool}` · `approval_resolved{approvalId,outcome}` · `done{sessionId,status,title?}` · `error{message}`

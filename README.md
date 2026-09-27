@@ -50,6 +50,12 @@ Verify: `GET /health` answers with the endpoint roster.
 
 Ask/approval states are reported as `pending` → `waiting` (still blocked, the turn is **not** handed to the model) → `orphaned` (the turn was aborted after a long wait; a late answer resumes it as a new turn).
 
+### About the `name` field of `/v1/models`
+
+- `id` (e.g. `deepseek-v4-flash`) is the **wire value**: pass it back verbatim when switching models; the plugin never rewrites it.
+- `name` is the human-readable label. Leading vendor prefixes are stripped for display only
+  (`DeepSeek-V4-Flash` → `V4-Flash`); it affects nothing else, and falls back to `id` when absent.
+
 ## SSE events
 
 `reasoning{content}` · `content{content}` · `tool_start{id,tool,input}` · `tool_end{id,tool,output,status}` · `waiting_approval{approvalId,tool}` · `approval_resolved{approvalId,outcome}` · `done{sessionId,status,title?}` · `error{message}`
