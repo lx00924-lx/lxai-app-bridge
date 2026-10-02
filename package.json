@@ -1,6 +1,6 @@
 {
   "name": "lxai-app-bridge",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": true,
   "description": "Local HTTP bridge plugin for a local agent host: model catalog, session list with real model/effort/permission state, SSE agent turns, choice-box (ask_user_question) relay, approval relay and abort - used by the LxAI App remote bridge (lxai_bridge.py).",
   "keywords": [
